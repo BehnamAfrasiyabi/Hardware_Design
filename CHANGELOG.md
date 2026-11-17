@@ -15,3 +15,11 @@
 - Engineering evidence labels, source hierarchy, and task workflow.
 - Eight lifecycle skill foundations.
 - Initial templates and validation checklist.
+
+## Unreleased — Lifecycle Skills v1
+- Expanded all eight native lifecycle skill documents from brief checklists into structured engineering workflows.
+- Added explicit required inputs, procedures, deliverables, quality gates, and agent safety constraints.
+- Clarified evidence levels and prohibited unsupported claims about ERC/DRC, simulation, physical testing, certification, and production release.
+- Added requirements traceability, verification record, and architecture decision record templates.
+- Updated the skill index with lifecycle gates and maturity definitions.
+- All lifecycle skills remain Draft pending review and validation against representative engineer-approved projects.
