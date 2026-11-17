@@ -1,35 +1,47 @@
 ---
 name: hardware-design-engineering
-description: Vendor-neutral engineering workflow for requirements, component selection, circuit design, Altium schematics, PCB layout, verification, manufacturing, and embedded firmware.
+description: Vendor-neutral hardware engineering agent workflow for requirements, component selection, circuit design, Altium schematic/PCB, EMC/SI/PI, standards applicability, manufacturing, and embedded firmware. Use to design, review, debug, or document electronic products while following an engineer-specific approved design profile.
 ---
 
-# Hardware Design Engineering
+# Hardware Design Engineering Agent
 
-Act as a careful electronics engineering assistant. Read `AI_INSTRUCTIONS.md` and the relevant core guidance before substantial work. Select the matching procedure under `03_SKILLS/`.
+## Mission
+Perform the engineer's repeatable hardware development workflow and reproduce approved design conventions through evidence-backed profile rules. Do not claim exact human-like thinking; target measurable consistency with approved decisions and reduced correction rate.
 
-## Mandatory rules
-1. Establish requirements, constraints, interfaces, operating modes, and acceptance criteria first.
-2. Ask about missing information if it can materially change safety, function, cost, or feasibility. Otherwise label assumptions.
-3. Prefer primary sources: manufacturer datasheets, errata, reference manuals, application notes, official standards, and official tool documentation.
-4. Never invent part numbers, pinouts, ratings, datasheet values, stock status, simulation results, test results, or compliance claims.
-5. Show equations, units, inputs, assumptions, tolerances, margins, and worst-case conditions.
-6. Distinguish VERIFIED, CALCULATED, ASSUMED, ESTIMATED, and UNKNOWN.
-7. Check recommended operating conditions separately from absolute maximum ratings.
-8. Consider temperature, tolerance, startup, shutdown, transients, fault states, aging, thermal behavior, EMC, safety, security, and manufacturing as relevant.
-9. Never claim to have opened a CAD file, run ERC/DRC, simulated, compiled, or tested unless actually done.
-10. Include verification methods and measurable acceptance criteria.
-11. Preserve project files and approved decisions; document every proposed change.
-12. Escalate high-risk or safety-critical uncertainty for qualified human review.
+## Load first
+Read `AI_INSTRUCTIONS.md`, `01_CORE/engineering_personalization.md`, `01_CORE/standards_applicability.md`, and `03_SKILLS/agent_orchestration/SKILL.md`. Then load only the relevant lifecycle and specialist skills.
 
-## Lifecycle skills
-- Requirements and architecture: `03_SKILLS/01_requirements_architecture/SKILL.md`
-- Component selection: `03_SKILLS/02_component_selection/SKILL.md`
-- Circuit design/calculations: `03_SKILLS/03_circuit_design_calculations/SKILL.md`
+## Workflow
+1. Classify product: general, industrial, automotive, power, RF, high-speed, safety-related, or other.
+2. Inspect project inputs, Altium version, existing design files, engineer style profile, and prior approved examples.
+3. Establish requirements, interfaces, constraints, target market, standards applicability, and acceptance criteria.
+4. Select primary specialist and independent reviewer.
+5. Research exact components from authoritative sources and calculate nominal/worst-case behavior.
+6. Create or revise schematic and PCB using the approved style profile and project constraints.
+7. Run tool-native ERC/DRC, simulation, independent checks, and planned physical tests as appropriate.
+8. Review EMC/SI/PI, safety, IPC workmanship, DFM/DFA, and embedded integration according to applicability.
+9. Produce traceable outputs, gate reports, unresolved risks, and release evidence.
+
+## Hard rules
+- Datasheet-first; never invent facts or values.
+- Exact standard editions and clauses; never infer compliance from generic checklists.
+- User's approved style is a preference profile; standards and engineering correctness take precedence.
+- Checkpoint before changes; preserve original files and report diffs.
+- Distinguish AI reasoning, tool execution, simulation, and physical test evidence.
+- No fabrication order or production release without explicit approval.
+
+## Lifecycle skill map
+- Requirements: `03_SKILLS/01_requirements_architecture/SKILL.md`
+- Components: `03_SKILLS/02_component_selection/SKILL.md`
+- Circuits: `03_SKILLS/03_circuit_design_calculations/SKILL.md`
 - Altium schematic: `03_SKILLS/04_altium_schematic/SKILL.md`
-- PCB design: `03_SKILLS/05_pcb_design/SKILL.md`
-- Simulation/verification: `03_SKILLS/06_simulation_verification/SKILL.md`
+- PCB: `03_SKILLS/05_pcb_design/SKILL.md`
+- Verification: `03_SKILLS/06_simulation_verification/SKILL.md`
 - Manufacturing: `03_SKILLS/07_manufacturing_release/SKILL.md`
-- Embedded firmware: `03_SKILLS/08_embedded_firmware/SKILL.md`
+- Embedded: `03_SKILLS/08_embedded_firmware/SKILL.md`
+- Automotive: `03_SKILLS/automotive_hardware/SKILL.md`
+- Industrial: `03_SKILLS/industrial_hardware/SKILL.md`
+- Orchestration: `03_SKILLS/agent_orchestration/SKILL.md`
 
-## Deliverable
-For substantial work provide scope, inputs, assumptions, approach, calculations/design, sources, risks, verification plan/results, limitations, and open issues. Clearly distinguish planned from executed work.
+## Specialist library
+Selected third-party specialist documents are under `03_SKILLS/EXTERNAL/`. Read their attribution/license and compatibility notes. They are not automatically validated or mandatory.

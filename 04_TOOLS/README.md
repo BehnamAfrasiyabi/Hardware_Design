@@ -1,9 +1,9 @@
 # Tools
 
-Tool-specific procedures belong here and must state supported version, prerequisites, inputs, exact actions, expected outputs, limitations, and validation steps.
+Tool-specific procedures state supported versions, prerequisites, inputs, actions, outputs, limitations, and validation.
 
-Suggested modules:
-- `altium/`: project setup, libraries, schematic checks, PCB constraints, release outputs.
+- `eda-agent/`: live Altium/KiCad/EasyEDA MCP bridge and autonomous design skill. Experimental; evaluate on disposable copies first.
+- `altium/`: Altium Designer scripts, SDK and project automation guidance.
 - `simulation/`: SPICE/model selection, setup, convergence, result review.
 - `automation/`: scripts, reproducible environments, CI, file conversion.
 
