@@ -1,0 +1,14 @@
+# Temporary files
+*.bak
+*.tmp
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# EDA generated output; keep intentional release artifacts in controlled folders
+_Project Outputs/
+History/
+__Previews/
+*.PrjPcb.Zip
